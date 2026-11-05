@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Atul Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    transition: 0.3s;
+}
+
+header {
+    background: #0759c7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #003d91;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #0878ed, #003b9e);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #111;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+section {
+    padding: 35px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0759c7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0001;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+form button {
+    width: 100%;
+}
+
+footer {
+    background: #003d91;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .card {
+    background: #252525;
+    color: white;
+}
+
+.dark section h2 {
+    color: #69aaff;
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    nav a {
+        margin: 7px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Atul Website</h1>
+    <p>Welcome to My Official Website</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+    <h2>Welcome to Atul Website</h2>
+    <p>आमच्या वेबसाइटवर आपले स्वागत आहे!</p>
+
+    <a href="#services" class="btn">Explore Services</a>
+
+    <br><br>
+
+    <button class="btn" onclick="toggleDark()">
+        Dark Mode
+    </button>
+</div>
+
+<section id="about">
+    <h2>About Us</h2>
+
+    <div class="card">
+        <h3>आमच्याबद्दल</h3>
+        <p>
+            ही माझी HTML, CSS आणि JavaScript वापरून
+            तयार केलेली वेबसाइट आहे.
+            येथे तुम्ही तुमच्या व्यवसायाची माहिती,
+            सेवा आणि संपर्क माहिती देऊ शकता.
+        </p>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌐 Website Design</h3>
+            <p>HTML CSS JavaScript वापरून वेबसाइट तयार करणे.</p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Mobile Website</h3>
+            <p>मोबाइल आणि संगणकावर चालणारी Responsive Website.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Web Development</h3>
+            <p>नवीन वेबसाइट आणि वेब प्रोजेक्ट तयार करणे.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="तुमचे नाव"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="तुमचा Email"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="तुमचा संदेश लिहा"
+            required
+        ></textarea>
+
+        <button class="btn" type="submit">
+            Send Message
+        </button>
+
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Atul Website</p>
+    <p>All Rights Reserved</p>
+</footer>
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919876543210"
+    target="_blank"
+    rel="noopener"
+>
+    WhatsApp
+</a>
+
+<script>
+
+// Dark Mode
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+
+// Contact Form
+document.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    alert(
+        "धन्यवाद " + name +
+        "!\nतुमचा संदेश तयार झाला आहे.\n" +
+        "Email: " + email +
+        "\nMessage: " + message
+    );
+
+    this.reset();
+});
+
+</script>
+
+</body>
+</html>
